@@ -59,3 +59,19 @@ document.addEventListener('click', () => {
         cursor.classList.remove('expand');
     }, 500);
 });
+
+// Add intersection observer for skills animation
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('skills-active');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+const skillContainers = document.querySelectorAll('.container1');
+skillContainers.forEach(container => {
+    skillsObserver.observe(container);
+});

@@ -891,7 +891,33 @@ section {
     width: 100%;
   }
 
+
   .project-list {
     grid-template-columns: 1fr;
   }
+}
+
+/* Skill Animation on Scroll */
+.container1 .info span,
+.container1 .progress-line,
+.container1 .progress-line span,
+.container1 .progress-line span::after,
+.container1 .progress-line span::before,
+.container1 .progress-bar,
+.container1 .path,
+.container1 .percentage,
+.container1 .text {
+    animation-play-state: paused !important;
+}
+
+.container1.skills-active .info span,
+.container1.skills-active .progress-line,
+.container1.skills-active .progress-line span,
+.container1.skills-active .progress-line span::after,
+.container1.skills-active .progress-line span::before,
+.container1.skills-active .progress-bar,
+.container1.skills-active .path,
+.container1.skills-active .percentage,
+.container1.skills-active .text {
+    animation-play-state: running !important;
 }
