@@ -388,11 +388,8 @@ section {
 .progress-line.nodejs span {
   width: 60%;
 }
-.progress-line.express span {
-  width: 60%;
-}
-.progress-line.mongodb span {
-  width: 50%;
+.progress-line.sql span {
+  width: 70%;
 }
 
 .progress-line span::after {
@@ -426,11 +423,8 @@ section {
 .progress-line.nodejs span::after {
   content: "60%";
 }
-.progress-line.express span::after {
-  content: "60%";
-}
-.progress-line.mongodb span::after {
-  content: "50%";
+.progress-line.sql span::after {
+  content: "70%";
 }
 
 .progress-line span::before {
