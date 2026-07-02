@@ -329,6 +329,10 @@ section {
   width: 600px;
   padding: 70px 60px;
   margin-left: 120px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.1);
 }
 .heading1 {
   text-align: center;
@@ -751,7 +755,7 @@ section {
   padding: 40px;
   border-radius: 20px;
   transition: background 0.5s, transform 0.5s;
-  box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+  box-shadow: 0 0 20px #0ef, 0 0 40px rgba(0, 238, 255, 0.4);
   max-width: 600px;
   width: 100%;
   text-align: center;
