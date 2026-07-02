@@ -740,36 +740,61 @@ section {
 
 
 .contact {
-  width: 100%;
   display: flex;
-  justify-content: center;
-}
-
-.contact .container {
-  width: 100%;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  justify-content: center;
+  padding: 100px 0;
   width: 100%;
 }
 
-.contact-box {
-  background-color: transparent;
-  padding: 40px;
-  border-radius: 20px;
-  transition: background 0.5s, transform 0.5s;
-  box-shadow: 0 0 20px #0ef, 0 0 40px rgba(0, 238, 255, 0.4);
-  max-width: 600px;
-  width: 100%;
+.line {
+  width: 80%;
+  max-width: 1200px;
+  height: 2px;
+  background: #00E5FF;
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+  margin: 40px 0;
+}
+
+.contact-content {
   text-align: center;
+  width: 100%;
 }
 
-.contact-box:hover {
-  transform: translateY(-10px);
+.contact-content h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.contact-content p {
+  color: #bfbfbf;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.contact-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  margin: 15px 30px;
+  font-size: 20px;
+  transition: 0.3s;
+  gap: 10px;
+}
+
+.contact-content a i {
+  font-size: 28px;
+  color: #00E5FF;
+}
+
+.contact-content a:hover {
+  color: #00E5FF;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
 }
 
 .cursor {
