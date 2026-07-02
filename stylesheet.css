@@ -19,12 +19,14 @@ body {
 body::before {
   content: '';
   position: fixed;
-  top: 20%;
-  left: 5%;
-  width: 40vw;
-  height: 40vw;
-  background: radial-gradient(circle, rgba(0, 238, 255, 0.15) 0%, rgba(0, 238, 255, 0) 60%);
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(0, 238, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 238, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
   z-index: -1;
   pointer-events: none;
 }
@@ -32,14 +34,19 @@ body::before {
 body::after {
   content: '';
   position: fixed;
-  bottom: -10%;
-  right: 5%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, rgba(0, 238, 255, 0.1) 0%, rgba(0, 238, 255, 0) 60%);
-  border-radius: 50%;
-  z-index: -1;
+  top: -50vw;
+  left: -50vw;
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(circle at center, rgba(0, 238, 255, 0.15) 0%, transparent 50%);
+  z-index: -2;
   pointer-events: none;
+  animation: moveGlow 10s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100vw, 100vh); }
 }
 
 
