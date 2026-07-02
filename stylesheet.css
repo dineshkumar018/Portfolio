@@ -11,7 +11,8 @@ html {
 
 body {
   color: #ededed;
-  background: #000000;
+  background: url('backgroundforall.png') no-repeat center center fixed;
+  background-size: cover;
   position: relative;
   z-index: 1;
 }
@@ -29,42 +30,6 @@ body::before {
   background-size: 40px 40px;
   z-index: -2;
   pointer-events: none;
-}
-
-.grid-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-  /* Mask applied to the container */
-  -webkit-mask-image: 
-    linear-gradient(black 1px, transparent 1px),
-    linear-gradient(90deg, black 1px, transparent 1px);
-  -webkit-mask-size: 40px 40px;
-  mask-image: 
-    linear-gradient(black 1px, transparent 1px),
-    linear-gradient(90deg, black 1px, transparent 1px);
-  mask-size: 40px 40px;
-}
-
-.cyber-wave {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  /* Multi-color diagonal beam */
-  background: linear-gradient(135deg, transparent 46%, #0ef 48%, #b026ff 52%, #ff00ff 54%, transparent 56%) no-repeat;
-  background-size: 300vw 300vh;
-  animation: cyberSweep 4s infinite linear;
-}
-
-@keyframes cyberSweep {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
 }
 
 
