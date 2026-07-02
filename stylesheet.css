@@ -271,9 +271,7 @@ body {
   transition:
     background 0.5s,
     transform 0.5s;
-  box-shadow:
-    1px 1px 20px #012290f7,
-    1px 1px 40px #0053b8f7;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 .Services-list div i {
   font-size: 50px;
@@ -318,7 +316,7 @@ body {
 }
 .Services-list div:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 40px cyan, 0 0 80px rgba(0, 238, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
 }
 
 section {
@@ -495,7 +493,7 @@ section {
 }
 .radial-bars .radial-bar .progress-bar {
   stroke-width: 10;
-  stroke: black;
+  stroke: rgba(255, 255, 255, 0.08);
   fill: transparent;
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
@@ -516,6 +514,7 @@ section {
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
   stroke-linecap: round;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.6));
 }
 .path-1 {
   animation: animate-path1 1s 1s linear forwards;
@@ -610,9 +609,7 @@ section {
   transition:
     background 0.5s,
     transform 0.5s;
-  box-shadow:
-    1px 1px 20px #012290f7,
-    1px 1px 40px #0053b8f7;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 .project-list div i {
   font-size: 50px;
@@ -661,7 +658,7 @@ section {
 }
 .project-list div:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 40px cyan, 0 0 80px rgba(0, 238, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
 }
 
 .stack-btn {
