@@ -24,8 +24,8 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    linear-gradient(rgba(0, 238, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 238, 255, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(0, 238, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 238, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: -2;
   pointer-events: none;
@@ -38,8 +38,9 @@ body::after {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle, rgba(0, 238, 255, 1) 0%, rgba(0, 238, 255, 0.6) 20%, transparent 60%) no-repeat;
-  background-size: 350px 350px;
+  /* A diagonal beam of light for a sweeping wave effect */
+  background: linear-gradient(135deg, transparent 48%, rgba(0, 238, 255, 1) 50%, transparent 52%) no-repeat;
+  background-size: 300vw 300vh;
   -webkit-mask-image: 
     linear-gradient(black 1px, transparent 1px),
     linear-gradient(90deg, black 1px, transparent 1px);
@@ -50,17 +51,12 @@ body::after {
   mask-size: 40px 40px;
   z-index: -1;
   pointer-events: none;
-  animation: moveGlowX 4s infinite alternate ease-in-out, moveGlowY 7s infinite alternate ease-in-out;
+  animation: waveSweep 4s infinite linear;
 }
 
-@keyframes moveGlowX {
-  0% { background-position-x: 0%; }
-  100% { background-position-x: 100%; }
-}
-
-@keyframes moveGlowY {
-  0% { background-position-y: 0%; }
-  100% { background-position-y: 100%; }
+@keyframes waveSweep {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
 
 
