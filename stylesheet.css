@@ -24,17 +24,47 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    linear-gradient(rgba(0, 238, 255, 0.4) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 238, 255, 0.4) 1px, transparent 1px);
+    linear-gradient(rgba(0, 238, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 238, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: -2;
   pointer-events: none;
-  animation: gridPulse 4s infinite alternate ease-in-out;
 }
 
-@keyframes gridPulse {
-  0% { opacity: 0.05; }
-  100% { opacity: 1; }
+.grid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  /* Mask applied to the container */
+  -webkit-mask-image: 
+    linear-gradient(black 1px, transparent 1px),
+    linear-gradient(90deg, black 1px, transparent 1px);
+  -webkit-mask-size: 40px 40px;
+  mask-image: 
+    linear-gradient(black 1px, transparent 1px),
+    linear-gradient(90deg, black 1px, transparent 1px);
+  mask-size: 40px 40px;
+}
+
+.cyber-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Multi-color diagonal beam */
+  background: linear-gradient(135deg, transparent 46%, #0ef 48%, #b026ff 52%, #ff00ff 54%, transparent 56%) no-repeat;
+  background-size: 300vw 300vh;
+  animation: cyberSweep 4s infinite linear;
+}
+
+@keyframes cyberSweep {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
 
 
