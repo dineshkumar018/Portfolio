@@ -24,46 +24,17 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    linear-gradient(rgba(0, 238, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 238, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0, 238, 255, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 238, 255, 0.4) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: -2;
   pointer-events: none;
+  animation: gridPulse 4s infinite alternate ease-in-out;
 }
 
-.radar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-  /* Mask applied to the container */
-  -webkit-mask-image: 
-    linear-gradient(black 1px, transparent 1px),
-    linear-gradient(90deg, black 1px, transparent 1px);
-  -webkit-mask-size: 40px 40px;
-  mask-image: 
-    linear-gradient(black 1px, transparent 1px),
-    linear-gradient(90deg, black 1px, transparent 1px);
-  mask-size: 40px 40px;
-}
-
-.radar-sweep {
-  position: absolute;
-  top: -50vh;
-  left: -50vw;
-  width: 200vw;
-  height: 200vh;
-  /* Spinning conic gradient for radar effect */
-  background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(0, 238, 255, 0.1) 270deg, rgba(0, 238, 255, 0.8) 360deg);
-  animation: radarSpin 4s infinite linear;
-}
-
-@keyframes radarSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes gridPulse {
+  0% { opacity: 0.05; }
+  100% { opacity: 1; }
 }
 
 
