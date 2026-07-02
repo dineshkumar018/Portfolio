@@ -38,9 +38,8 @@ body::after {
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* A diagonal beam of light for a sweeping wave effect */
-  background: linear-gradient(135deg, transparent 48%, rgba(0, 238, 255, 1) 50%, transparent 52%) no-repeat;
-  background-size: 300vw 300vh;
+  /* Flashlight effect following mouse */
+  background: radial-gradient(circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(0, 238, 255, 1) 0%, rgba(0, 238, 255, 0.4) 15%, transparent 35%) no-repeat;
   -webkit-mask-image: 
     linear-gradient(black 1px, transparent 1px),
     linear-gradient(90deg, black 1px, transparent 1px);
@@ -51,12 +50,6 @@ body::after {
   mask-size: 40px 40px;
   z-index: -1;
   pointer-events: none;
-  animation: waveSweep 4s infinite linear;
-}
-
-@keyframes waveSweep {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
 }
 
 

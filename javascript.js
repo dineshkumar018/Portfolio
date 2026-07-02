@@ -50,6 +50,9 @@ document.addEventListener('mousemove', (e) => {
     setTimeout(() => {
         trail.remove();
     }, 500); 
+    
+    document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
+    document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
 });
 
 document.addEventListener('click', () => {
