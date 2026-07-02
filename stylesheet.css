@@ -12,6 +12,34 @@ html {
 body {
   color: #ededed;
   background: #000000;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(0, 238, 255, 0.15) 0%, rgba(0, 238, 255, 0) 60%);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  right: 5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(0, 238, 255, 0.1) 0%, rgba(0, 238, 255, 0) 60%);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 
