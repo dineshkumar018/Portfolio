@@ -195,6 +195,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
+  margin-top: 100px;
 }
 .about .home-img {
   margin-left: 100px;
