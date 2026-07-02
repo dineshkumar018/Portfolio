@@ -210,6 +210,9 @@ body {
   margin: 0 auto;
   box-shadow: -10px -10px 25px #0ef, 10px 10px 25px #b026ff;
 }
+.about-text {
+  margin-left: -50px;
+}
 .about-text h2 {
   font-size: 60px;
 }
