@@ -50,12 +50,17 @@ body::after {
   mask-size: 40px 40px;
   z-index: -1;
   pointer-events: none;
-  animation: flowGlowGrid 4s infinite alternate ease-in-out;
+  animation: moveGlowX 4s infinite alternate ease-in-out, moveGlowY 7s infinite alternate ease-in-out;
 }
 
-@keyframes flowGlowGrid {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
+@keyframes moveGlowX {
+  0% { background-position-x: 0%; }
+  100% { background-position-x: 100%; }
+}
+
+@keyframes moveGlowY {
+  0% { background-position-y: 0%; }
+  100% { background-position-y: 100%; }
 }
 
 
