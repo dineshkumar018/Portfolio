@@ -39,7 +39,7 @@ body::after {
   width: 100vw;
   height: 100vh;
   background: radial-gradient(circle, rgba(0, 238, 255, 1) 0%, rgba(0, 238, 255, 0.6) 20%, transparent 60%) no-repeat;
-  background-size: 800px 800px;
+  background-size: 350px 350px;
   -webkit-mask-image: 
     linear-gradient(black 1px, transparent 1px),
     linear-gradient(90deg, black 1px, transparent 1px);
@@ -50,7 +50,7 @@ body::after {
   mask-size: 40px 40px;
   z-index: -1;
   pointer-events: none;
-  animation: flowGlowGrid 10s infinite alternate ease-in-out;
+  animation: flowGlowGrid 4s infinite alternate ease-in-out;
 }
 
 @keyframes flowGlowGrid {
