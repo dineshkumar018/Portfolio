@@ -196,6 +196,9 @@ body {
   align-items: center;
   gap: 1.5rem;
 }
+.about .home-img {
+  margin-left: 50px;
+}
 .about-img img {
   max-width: 300px;
   aspect-ratio: 4 / 5;
