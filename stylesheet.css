@@ -804,11 +804,9 @@ section {
   border-radius: 50%;
   background-color: #0ef;
   pointer-events: none;
-  mix-blend-mode: screen;
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, background-color 0.2s;
-  box-shadow: 0 0 2px #0ef;
 }
 
 .cursor.expand {
@@ -841,7 +839,6 @@ section {
   z-index: 9998;
   transform: translate(-50%, -50%);
   opacity: 0.8;
-  box-shadow: 0 0 2px #0ef;
   animation: fadeOut 0.5s linear forwards;
 }
 
