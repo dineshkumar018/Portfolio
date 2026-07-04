@@ -108,14 +108,17 @@ const aboutObserver = new IntersectionObserver((entries) => {
             new Typed(".about-h4", {
                 strings: ["Full Stack Developer!"],
                 typeSpeed: 50,
-                showCursor: false
+                showCursor: true,
+                onComplete: function(self) {
+                    self.cursor.style.display = 'none';
+                }
             });
 
             new Typed(".about-p", {
                 strings: ["I am a passionate Full Stack Developer with a strong interest in building responsive and scalable web applications. I specialize in frontend development using HTML, CSS, JavaScript, and React, and I also have a solid understanding of backend technologies like Node.js, Express, and MongoDB. I enjoy solving problems, writing clean and efficient code, and continuously learning new technologies to improve my development skills. I am always eager to take on new challenges and grow as a developer by building impactful and user-friendly applications."],
                 typeSpeed: 15,
                 startDelay: 1200,
-                showCursor: false
+                showCursor: true
             });
         }
     });
