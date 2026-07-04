@@ -99,39 +99,29 @@ revealElements.forEach(el => {
     revealObserver.observe(el);
 });
 
-// About Me Typewriter Animation
-const aboutObserver = new IntersectionObserver((entries, observer) => {
+// About Me Typing Animation Observer
+let aboutTyped = false;
+const aboutObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const h4 = entry.target.querySelector('h4');
-            const p = entry.target.querySelector('p');
-            
-            if (h4 && p && !h4.classList.contains('typed-done')) {
-                h4.classList.add('typed-done'); // Prevent re-triggering
-                
-                const h4Text = h4.innerHTML;
-                const pText = p.innerHTML.trim().replace(/\s+/g, ' ');
-                
-                h4.innerHTML = "";
-                p.innerHTML = "";
-                
-                new Typed(h4, {
-                    strings: [h4Text],
-                    typeSpeed: 50,
-                    showCursor: false
-                });
-                
-                setTimeout(() => {
-                    new Typed(p, {
-                        strings: [pText],
-                        typeSpeed: 10,
-                        showCursor: true
-                    });
-                }, 1200);
-            }
+        if (entry.isIntersecting && !aboutTyped) {
+            aboutTyped = true;
+            new Typed(".about-h4", {
+                strings: ["Full Stack Developer!"],
+                typeSpeed: 50,
+                showCursor: false
+            });
+
+            new Typed(".about-p", {
+                strings: ["I am a passionate Full Stack Developer with a strong interest in building responsive and scalable web applications. I specialize in frontend development using HTML, CSS, JavaScript, and React, and I also have a solid understanding of backend technologies like Node.js, Express, and MongoDB. I enjoy solving problems, writing clean and efficient code, and continuously learning new technologies to improve my development skills. I am always eager to take on new challenges and grow as a developer by building impactful and user-friendly applications."],
+                typeSpeed: 15,
+                startDelay: 1200,
+                showCursor: false
+            });
         }
     });
 }, { threshold: 0.5 });
 
 const aboutSection = document.querySelector('.about-text');
-if (aboutSection) aboutObserver.observe(aboutSection);
+if(aboutSection) {
+    aboutObserver.observe(aboutSection);
+}
