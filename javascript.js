@@ -98,3 +98,40 @@ const revealElements = document.querySelectorAll('.reveal');
 revealElements.forEach(el => {
     revealObserver.observe(el);
 });
+
+// About Me Typewriter Animation
+const aboutObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const h4 = entry.target.querySelector('h4');
+            const p = entry.target.querySelector('p');
+            
+            if (h4 && p && !h4.classList.contains('typed-done')) {
+                h4.classList.add('typed-done'); // Prevent re-triggering
+                
+                const h4Text = h4.innerHTML;
+                const pText = p.innerHTML.trim().replace(/\s+/g, ' ');
+                
+                h4.innerHTML = "";
+                p.innerHTML = "";
+                
+                new Typed(h4, {
+                    strings: [h4Text],
+                    typeSpeed: 50,
+                    showCursor: false
+                });
+                
+                setTimeout(() => {
+                    new Typed(p, {
+                        strings: [pText],
+                        typeSpeed: 10,
+                        showCursor: true
+                    });
+                }, 1200);
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+const aboutSection = document.querySelector('.about-text');
+if (aboutSection) aboutObserver.observe(aboutSection);
