@@ -78,3 +78,23 @@ const skillContainers = document.querySelectorAll('.container1');
 skillContainers.forEach(container => {
     skillsObserver.observe(container);
 });
+
+// Scroll Reveal Observer
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+// Automatically add reveal class to Expertise and Project cards
+const cardsToReveal = document.querySelectorAll('.Services-list div, .project-list div');
+cardsToReveal.forEach(card => card.classList.add('reveal'));
+
+const revealElements = document.querySelectorAll('.reveal');
+revealElements.forEach(el => {
+    revealObserver.observe(el);
+});
