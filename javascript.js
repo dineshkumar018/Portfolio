@@ -33,35 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', (e) => {
-   
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-
-    const trail = document.createElement('div');
-    trail.classList.add('cursor-trail');
-    trail.style.left = e.clientX + 'px';
-    trail.style.top = e.clientY + 'px';
-    
-    document.body.appendChild(trail);
-
-    setTimeout(() => {
-        trail.remove();
-    }, 500); 
-    
-    document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
-    document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
-});
-
-document.addEventListener('click', () => {
-    cursor.classList.add('expand');
-
-    setTimeout(() => {
-        cursor.classList.remove('expand');
-    }, 500);
-});
 
 // Add intersection observer for skills animation
 const skillsObserver = new IntersectionObserver((entries) => {
